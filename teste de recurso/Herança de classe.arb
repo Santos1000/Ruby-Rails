@@ -1,0 +1,25 @@
+class Automovel
+
+    def self.tipo_cambio         # CRIANDO METODO DE CLASSE OBJ
+        Puts "Manual"
+    end
+
+
+    def acelera
+        verifica_combustivel
+        puts "Acelerando automóvel..." # METODO DE INSTANCIA DE OBJ
+    end
+
+class Carro < Automovel
+    def acelera
+        puts "Verificando equipamento..."
+        super               # CLONANDO
+    end
+
+# SÓ A CLASSE PODERÁ TER ACESSO A ESSE MÉTODO
+    Private 
+        def verifica_combustivel
+            puts "Verificando o combustível"
+        end
+end
+

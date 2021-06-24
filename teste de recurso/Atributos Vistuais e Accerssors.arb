@@ -1,0 +1,22 @@
+class Carro 
+
+    attr_accessor :marca, :modelo # imputamos os dois atributos
+    #attr_reader :marca, :modelo  -> somente SETS
+    #attr_writer :marca, :modelo -> somente GETS
+
+    def descricao # os dois atributos virtuais vazios para completar
+        "Marca: #{@marca} e Modelo: #{@modelo}"
+    end
+
+    def velocidade_maxima
+        250
+    end
+end
+
+carro = Carro.new
+carro.marca = "Ford"   #GETS
+carro.modelo = "Focus"
+puts "Marca: " + carro.marca  #SETS
+puts "Modelo: " + carro.modelo
+puts "Descrição: " + carro.descricao
+
